@@ -1,5 +1,5 @@
 pkgname=tree
-pkgver=1.8.0
+pkgver=2.0.0
 pkgrel=1
 pkgdesc="A directory listing program displaying a depth indented list of files"
 arch=('x86_64')
@@ -7,7 +7,7 @@ url="http://mama.indstate.edu/users/ice/tree/"
 license=('GPL')
 depends=('glibc')
 source=("http://mama.indstate.edu/users/ice/${pkgname}/src/${pkgname}-${pkgver}.tgz")
-md5sums=('715191c7f369be377fc7cc8ce0ccd835')
+sha256sums=('782cd73179f65cfca7f29326f1511306e49e9b11d5b861daa57e13fd7262889f')
 
 build() {
   cd "${srcdir}/${pkgname}-${pkgver}"
