@@ -7,16 +7,18 @@ url="http://mama.indstate.edu/users/ice/tree/"
 license=('GPL')
 depends=('glibc')
 source=("http://mama.indstate.edu/users/ice/${pkgname}/src/${pkgname}-${pkgver}.tgz")
-sha256sums=('d3c3d55f403af7c76556546325aa1eca90b918cbaaf6d3ab60a49d8367ab90d5')
+sha256sums=('SKIP')
 
 build() {
   cd "${srcdir}/${pkgname}-${pkgver}"
 
-  make
+  make all
 }
 
 package() {
   cd "${srcdir}/${pkgname}-${pkgver}"
 
-  make prefix="${pkgdir}/usr" MANDIR="${pkgdir}/usr/share/man/man1" install
+  make prefix="${pkgdir}/usr" MANDIR="${pkgdir}/usr/share/man/man1" install all
+  install -dm755 ${pkgdir}/usr/bin
+  install -Dm755 "${srcdir}/${pkgname}-${pkgver}/${pkgname}" -t "${pkgdir}/usr/bin"
 }
