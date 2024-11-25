@@ -1,5 +1,5 @@
 pkgname=tree
-pkgver=2.1.3
+pkgver=2.2.0
 pkgrel=1
 pkgdesc="A directory listing program displaying a depth indented list of files"
 arch=('x86_64')
@@ -7,7 +7,7 @@ url="http://oldmanprogrammer.net/source.php?dir=projects/tree"
 license=('GPL')
 depends=('glibc')
 source=("https://github.com/Old-Man-Programmer/${pkgname}/archive/refs/tags/${pkgver}.tar.gz")
-sha256sums=('3ffe2c8bb21194b088ad1e723f0cf340dd434453c5ff9af6a38e0d47e0c2723b')
+sha256sums=('c4964b503d609e7146edd75566b978b1853e2cebee7c0342be230cbd84da326c')
 
 build() {
   cd "${srcdir}/${pkgname}-${pkgver}"
